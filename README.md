@@ -254,6 +254,12 @@ In this part, we will cover all the components and their relationships in the pr
 
   * #### 5. Edit `persistence-mysql.properties`
     The next step you need to do is to edit `src/main/resources/persistence-mysql.properties` file, change the values of `jdbc.url`, `jdbc.user` and `jdbc.pass` according to the MySQL configuration on your computer.
+    For example: 
+       jdbc.driverClassName=com.mysql.jdbc.Driver
+       jdbc.url=jdbc:mysql://localhost:3306/house_monitor_db?  createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+       jdbc.user=root
+       jdbc.pass=123456
+       (Since my SQL local host is 3306 and I stored the data in root)
 
   * #### 6. Build
     Since this is a maven project, it is easy to solve complicated package dependency problem. Make sure you have maven installed in your machine, go to the root directory of the repository you just cloned, open your terminal, type in the following command:
